@@ -6,6 +6,13 @@ import webbrowser
 from time import sleep
 # loop to repeat the process every 24 hours
 # loop para repetir o processo a cada 24 horas
+# function logout
+# função logout
+def logout():
+    pyautogui.click(y,x, duration=2)  # logout button coordinate
+    sleep(1)
+    pyautogui.click(y,x, duration=2)  # logout button coordinate
+    pyautogui.hotkey('ctrl', 'w')
 while True:
 # open page browser and open instagram
 # abrir página do navegador e abrir o Instagram
@@ -61,6 +68,7 @@ while True:
         heart = None
     sleep(1)
     if heart is not None:
+        logout()
         sleep(86400)
         # if the image is not liked click like
         # se a imagem não foi curtida, clicar em curtir
@@ -80,12 +88,9 @@ while True:
         # pause bot for 24 hours
         # pausar o bot por 24 horas
         sleep(86400)
-    # logout of instagram
-    # fazer logout do Instagram
-    pyautogui.click(-1310,954, duration=2)  # logout button coordinate
-    sleep(1)
-    # close browser
-    # fechar o navegador
-    pyautogui.hotkey('ctrl', 'w')
-    # after 24 hours, repeat process
-    # após 24 horas, repetir o processo
+        # logout of instagram
+        # fazer logout do Instagram
+        logout()
+        # pause bot for 24 hours
+        # pausar o bot por 24 horas
+        sleep(86400)
