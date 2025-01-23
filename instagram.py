@@ -13,24 +13,24 @@ while True:
     sleep(5)
     # enter user
     # inserir usuário
-    '''pyautogui.click(x=-975,y=363, duration=1)
+    pyautogui.click(x,y, duration=1)
     sleep(1)
     pyautogui.typewrite('user', interval=0.25)
-    sleep(1)'''
+    sleep(1)
     # enter password
     # inserir senha
-    '''pyautogui.click(x=-1012,y=420, duration=1)
+    pyautogui.click(x,y, duration=1)
     sleep(1)
     pyautogui.typewrite('password', interval=0.25)
-    sleep(1)'''
+    sleep(1)
     # click login
     # clicar em login
     pyautogui.click(-952,470,duration=4)
     sleep(5)
     # click not now to no save browser
     # clicar em não agora para não salvar o navegador
-    '''pyautogui.click(x=-1012,y=420, duration=1)
-    sleep(1)'''
+    pyautogui.click(x,y, duration=1)
+    sleep(1)
     # click not now to no save password
     # clicar em não agora para não salvar a senha
     pyautogui.click(-914,640,duration=1)
@@ -59,11 +59,9 @@ while True:
         heart = pyautogui.locateCenterOnScreen('heart.png')
     except ImageNotFoundException:
         heart = None
-
     sleep(1)
     if heart is not None:
         sleep(86400)
-
         # if the image is not liked click like
         # se a imagem não foi curtida, clicar em curtir
     else:
@@ -71,7 +69,7 @@ while True:
         sleep(5)
         # if the image is not comment, comment image
         # se a imagem não foi comentada, comentar a imagem
-        pyautogui.click(-999,673, duration=2)  # Coordenada para o campo de comentário
+        pyautogui.click(-999,673, duration=2)  # field to comment coordinate
         sleep(1)
         pyautogui.click(-927,806, duration=2)
         sleep(1)
@@ -82,10 +80,9 @@ while True:
         # pause bot for 24 hours
         # pausar o bot por 24 horas
         sleep(86400)
-
     # logout of instagram
     # fazer logout do Instagram
-    pyautogui.click(-1310,954, duration=2)  # Coordenada para o botão de logout
+    pyautogui.click(-1310,954, duration=2)  # logout button coordinate
     sleep(1)
     # close browser
     # fechar o navegador
